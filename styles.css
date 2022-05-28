@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+
+body {
+    padding: 0%;
+    margin: 0%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.calculadora-formato {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+
+.calculadora-formato > button {
+    display: grid;
+    background-color:  #585a5a; /*cor de fundo*/
+    align-content: center;
+    color: white;  /* cor do numero */
+    border-radius: 60px;
+    font-size: 30px;  /* tamanho do numero */
+}
+
+
+.calculadora-formato > button:hover {
+    background-color:   #a5a7a7; /* cor de fundo quando passa o mouse em */
+}
+
+.span-two {
+    grid-column: span 2;
+  }
+
+  .output {
+    grid-column: 1 / -1;
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color:  #585a5a;
+    border-radius: 30px;
+  }
+
+.output .operaçao-de-previu {
+  color: #bcbdbd;
+  font-size: 1.5rem;
+}
+
+.output .operaçao-atual {
+  color: white;
+  font-size: 2.5rem;
+}
